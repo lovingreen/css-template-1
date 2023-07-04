@@ -1,0 +1,338 @@
+:root {
+    --space-s: 8px;
+    --space-m: 12px;
+    --space-xm: 16px;
+    --space-l: 24px;
+    --space-b: 36px;
+
+    --size-d: 16px;
+    --size-s: 14px;
+    --size-l: 20px;
+    --size-b: 24px;
+
+    --color-border: #D3DEE9;
+    --color-primary: #004cd1;
+    --color-white: #fff;
+    --color-title: #212529;
+    --color-text: #5A5A5A;
+    --color-gray: #6C757D;
+    --color-background: #F8F9FA;
+
+    --border-radius-d: 12px;
+    --border-radius-s: 4px;
+
+    --weight-title: 600;
+    --weight-text: 400;
+
+    --page-width: 1000px;
+}
+
+/* ========================= */
+.page {
+    background: var(--color-white);
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.page_content {
+    max-width: var(--page-width);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 80px;
+}
+
+/* ============================ */
+
+.header {
+    padding: var(--space-l);
+    border-bottom: 1px solid var(--color-border);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 17px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    
+    width: 24px;
+    height: 24px;
+    border-radius: calc(var(--border-radius-d)/2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_inline {
+    gap: var(--space-l);
+}
+
+.nav_vertical {
+    gap: var(--space-xm);
+
+    flex-direction: column;
+}
+
+.nav_link {
+    font-size: var(--size-d);
+    color: #343A40;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.footer {
+    padding: var(--space-l) 0;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_copyright {
+    font-size: var(--space-s);
+    color: var(--color-gray);
+
+    display: block;
+    margin-top: var(--space-m);
+}
+
+.footer_title {
+    font-size: var(--size-l);
+    color: var(--color-title);
+
+    display: block;
+    margin-bottom: var(--space-m);
+
+    font-weight: var(--weight-title);
+}
+
+.main {
+    display: flex;
+    width: 100%;
+
+    gap: var(--space-l);
+}
+.info {
+    max-width: 590px;
+    width: 100%;
+}
+.info_title {
+    font-size: 56px;
+    color: var(--color-title);
+    font-weight: var(--weight-title);
+
+    padding-bottom: var(--space-l);
+}
+.info_paragraph {
+    color: var(--color-title);
+    font-size: var(--size-b);
+    font-weight: var(--weight-text);
+    line-height: 36px;
+    max-width: 412px;
+    width: 100%;
+}
+
+.form {
+    max-width: 400px;
+
+    border-radius: 4px;
+    border: 1px solid #DEE2E6;
+    background-color: var(--color-background);    
+
+    padding: var(--space-l);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+}
+
+.form_title {
+    text-align: center;
+    font-size: var(--size-d);
+    font-weight: var(--weight-text);
+    color: var(--color-title);
+
+}
+
+.form_info {
+    text-align: center;
+    font-size: var(--size-d);
+    font-weight: var(--weight-text);
+    color: var(--color-gray);
+}
+
+.form_button {
+    text-align: center;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: calc(var(--border-radius-d) / 3);
+
+    transition: opacity 0.7s;
+}
+
+.form_button:hover {
+    opacity: 0.7;
+}
+
+.form_button:active {
+    opacity: 0.3;
+}
+
+.form_input_list {
+    display: flex;
+    gap: var(--space-m);
+    flex-direction: column;
+}
+
+.form_input {
+    padding: var(--space-m);
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius-s);
+    background-color: var(--color-white);
+}
+
+.form_input::placeholder {
+    color: var(--color-title);
+    font-size: var(--size-d);
+}
+
+.form_checkbox {
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
+}
+
+.form_checkbox > input {
+    border: 1px solid #767676;
+    border-radius: 4px;
+
+    display: none;
+}
+
+.form_checkbox > input ~ div {
+    border: 1px solid #767676;
+    border-radius: 4px;
+    height: 13px;
+    width: 13px;
+}
+
+.form_checkbox > input:checked ~ div {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.form_ckeckbox > label {
+    color: var(--color-title);
+    font-size: var(--size-d);
+    cursor: pointer;
+}
+
+.updates {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    padding: 24px;
+}
+.updates_title {
+    color: var(--color-title);
+    font-size: var(--size-b);
+    font-weight: var(--weight-text);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+.updates_container {
+    display: flex;
+}
+.updates_textblock {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+.updates_image {
+    background-color: #004cd1;
+    width: 36px;
+    height: 36px;
+    color: #000;
+    font-size: 12px;
+    font-weight: var(--weight-text);
+    line-height: 36px;
+    margin-right: 8px;
+}
+.updates_user {
+    color: var(--color-gray);
+    font-size: 12px;
+    font-weight: var(--weight-title);
+    line-height: 16px;
+}
+.updates_text {
+    color: var(--color-gray);
+    font-size: 16px;
+    font-weight: var(--weight-text);
+}
+.experience {
+    padding: 24px 28px;
+    background-color: var(--color-background);
+    position: relative;
+    border-radius: var(--border-radius-s);
+}
+.experience_badge {
+    background: #FF7347;
+    border-radius: 70px;
+    transform: rotate(30deg);
+    padding: 12px 24px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    color: var(--color-white);
+}
+.experience_title {
+    color: var(--color-title);
+    font-size: 42px;
+    line-height: 120%;
+    font-weight: var(--weight-title);
+    padding-bottom: 24px;
+}
+.experience_container {
+    display: flex;
+    gap: var(--space-l);
+}
+.experience_block {
+    padding: 16px;
+    background-color: var(--color-title);
+    border-radius: var(--border-radius-d);
+}
+
+.experience_name {
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: var(--weight-title);
+    line-height: 26px;
+    padding-bottom: 25px;
+}
+.experience_paragraph {
+    font-size: 16px;
+    font-weight: var(--weight-text);
+    line-height: 22px;
+    color: #B1B1B1;
+}

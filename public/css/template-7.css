@@ -1,0 +1,58 @@
+:root {
+    --page-width: 1150px;
+
+    --color-dark-purple: #111827;
+    --color-light-purple: #885FFB;
+    --color-white: #fff;
+
+    --weight-bold: 700;
+    
+}
+
+/* ========================= */
+.page {
+    background: var(--color-dark-purple);
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.page_content {
+    max-width: var(--page-width);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+}
+/* ============================ */
+.header {
+
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #253041;
+    padding: 12px 0;
+}
+.header__logo {
+    color: var(--color-white);
+    background-color: var(--color-light-purple);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+}
+.header__menu {
+    display: flex;
+    gap: 24px;
+}
+.menu__item a{
+    color: var(--color-white);
+    text-decoration: none;
+}
